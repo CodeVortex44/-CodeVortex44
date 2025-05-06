@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Download Zone</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 10px #00f6ff); }
+      50% { filter: drop-shadow(0 0 20px #00f6ff) drop-shadow(0 0 30px #0ff); }
+    }
+    .glow-logo {
+      animation: glow 2s infinite ease-in-out;
+    }
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      background: url('https://cdn.discordapp.com/attachments/1327849304400072855/1369337404959363163/6465523b553f44e3246164794c7011a2.gif?ex=681b7e56&is=681a2cd6&hm=9be4f0f0ad1f1becec813e549384c0387596f1bfb373a5aff2775ec19e884432&')no-repeat;
+      background-size:cover;
+      opacity: 0.4;
+      z-index: 10;
+    }
+    .floating-candy {
+      position: absolute;
+      width: 40px;
+      animation: float 8s infinite ease-in-out;
+      z-index: 9;
+    }
+    @keyframes float {
+      0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+      50% { opacity: 1; }
+      100% { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+    }
+    .floating-candy:nth-child(1) {
+      left: 5%;
+      animation-delay: 0s;
+      animation-duration: 10s;
+    }
+    .floating-candy:nth-child(2) {
+      left: 20%;
+      animation-delay: 2s;
+      animation-duration: 12s;
+    }
+    .floating-candy:nth-child(3) {
+      left: 35%;
+      animation-delay: 4s;
+      animation-duration: 14s;
+    }
+    .floating-candy:nth-child(4) {
+      left: 50%;
+      animation-delay: 6s;
+      animation-duration: 16s;
+    }
+    .floating-candy:nth-child(5) {
+      left: 65%;
+      animation-delay: 8s;
+      animation-duration: 18s;
+    }
+    .floating-candy:nth-child(6) {
+      left: 80%;
+      animation-delay: 10s;
+      animation-duration: 20s;
+    }
+    .floating-candy:nth-child(7) {
+      left: 90%;
+      animation-delay: 12s;
+      animation-duration: 22s;
+    }
+
+    @keyframes scroll-text {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+
+    .scrolling-text {
+      display: inline-block;
+      white-space: nowrap;
+      animation: scroll-text 15s linear infinite;
+    }
+
+    .toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #00f6ff;
+      color: black;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 0 10px #0ff;
+      z-index: 999;
+      animation: fadein 0.3s, fadeout 0.5s 2.5s;
+    }
+    @keyframes fadein { from { opacity: 0; bottom: 0; } to { opacity: 1; bottom: 30px; } }
+    @keyframes fadeout { from { opacity: 1; } to { opacity: 0; } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-black via-gray-900 to-gray-800 min-h-screen text-white font-mono overflow-x-hidden">
+
+  <!-- ลูกกวาดลอย -->
+  <img src="https://cdn.discordapp.com/attachments/1366030028642713735/1369334987270262967/pngtree-illustration-of-a-candy-cane-with-ribbons-for-christmas-holiday-artwork-png-image_5676983-removebg-preview.png?ex=681b7c15&is=681a2a95&hm=70184c7fb9804216f75883462bf81c3a7bbd29717d5dfed6b4bd444b55de43f0&" class="floating-candy" />
+  <img src="https://cdn.discordapp.com/attachments/1366030028642713735/1369334987270262967/pngtree-illustration-of-a-candy-cane-with-ribbons-for-christmas-holiday-artwork-png-image_5676983-removebg-preview.png?ex=681b7c15&is=681a2a95&hm=70184c7fb9804216f75883462bf81c3a7bbd29717d5dfed6b4bd444b55de43f0&" class="floating-candy" />
+  <img src="https://cdn.discordapp.com/attachments/1366030028642713735/1369334987270262967/pngtree-illustration-of-a-candy-cane-with-ribbons-for-christmas-holiday-artwork-png-image_5676983-removebg-preview.png?ex=681b7c15&is=681a2a95&hm=70184c7fb9804216f75883462bf81c3a7bbd29717d5dfed6b4bd444b55de43f0&" class="floating-candy" />
+  <img src="https://cdn.discordapp.com/attachments/1366030028642713735/1369334987270262967/pngtree-illustration-of-a-candy-cane-with-ribbons-for-christmas-holiday-artwork-png-image_5676983-removebg-preview.png?ex=681b7c15&is=681a2a95&hm=70184c7fb9804216f75883462bf81c3a7bbd29717d5dfed6b4bd444b55de43f0&" class="floating-candy" />
+  <img src="https://cdn.discordapp.com/attachments/1366030028642713735/1369334987270262967/pngtree-illustration-of-a-candy-cane-with-ribbons-for-christmas-holiday-artwork-png-image_5676983-removebg-preview.png?ex=681b7c15&is=681a2a95&hm=70184c7fb9804216f75883462bf81c3a7bbd29717d5dfed6b4bd444b55de43f0&" class="floating-candy" />
+  <img src="https://cdn.discordapp.com/attachments/1366030028642713735/1369334987270262967/pngtree-illustration-of-a-candy-cane-with-ribbons-for-christmas-holiday-artwork-png-image_5676983-removebg-preview.png?ex=681b7c15&is=681a2a95&hm=70184c7fb9804216f75883462bf81c3a7bbd29717d5dfed6b4bd444b55de43f0&" class="floating-candy" />
+  <img src="https://cdn.discordapp.com/attachments/1366030028642713735/1369334987270262967/pngtree-illustration-of-a-candy-cane-with-ribbons-for-christmas-holiday-artwork-png-image_5676983-removebg-preview.png?ex=681b7c15&is=681a2a95&hm=70184c7fb9804216f75883462bf81c3a7bbd29717d5dfed6b4bd444b55de43f0&" class="floating-candy" />
+
+  <div class="flex flex-col items-center justify-start min-h-screen px-4 pt-16 space-y-12 relative z-20">
+
+    <!-- ข่าวสารรวม -->
+    <p class="text-cyan-200 text-lg font-semibold bg-black bg-opacity-40 border border-cyan-500 rounded-lg px-4 py-3 shadow-md w-full max-w-2xl text-center overflow-hidden">
+      <span class="scrolling-text">
+        🚀 อัปเดตไฟล์ทุกสัปดาห์! 🔄 บริการอัปเดต 24 ชั่วโมงทุกวัน ไม่มีหยุด! ⏰ และยืนยันว่าเว็บไซต์นี้ไม่มีเนื้อหา Toxic หรือเป็นพิษต่อผู้ใช้งาน ❤️
+      </span>
+    </p>
+
+    <!-- กล่องเมนูหลัก -->
+    <div class="bg-gray-900 bg-opacity-70 border border-cyan-500 rounded-2xl shadow-2xl p-8 max-w-md w-full text-center">
+      
+      <!-- โลโก้ -->
+      <img src="https://cdn.discordapp.com/attachments/1327849304400072855/1364675867510444133/MOSHED-2025-4-23-11-54-32.gif?ex=681b03b1&is=6819b231&hm=f36ef1d719c6a29f4252e450b02d680bbf3e7526faca7ed592c10118980f062d&" alt="โลโก้เท่ๆ" class="w-24 mx-auto mb-6 glow-logo rounded-full" />
+
+      <h1 class="text-3xl font-bold mb-3 text-cyan-300 tracking-wide">DOWNLOAD ZONE</h1>
+      <p class="text-gray-300 mb-6">ศูนย์รวมการเข้าถึงระบบ</p>
+
+      <!-- ปุ่มดาวน์โหลด -->
+      <a href="https://www.mediafire.com/file/255mynvalkaetmh/%25E0%25B9%2582%25E0%25B8%259B%25E0%25B8%25A3%25E0%25B9%2581%25E0%25B8%2581%25E0%25B8%25A3%25E0%25B8%25A1.zip/file"
+         onclick="playClick(); notifyDiscord('📥 ⬇ Download โปรแกรม'); showToast('✅ โหลดไฟล์เสร็จแล้ว!')"
+         class="block w-full py-3 mb-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-black font-bold rounded-xl hover:from-cyan-400 hover:to-blue-500 transition shadow-lg">
+        ⬇ Download โปรแกรม
+      </a>
+
+    </div>
+  </div>
+
+  <!-- เอฟเฟกต์เสียง -->
+  <audio id="click-sound" src="https://www.myinstants.com/media/sounds/minecraft_click.mp3"></audio>
+
+  <script>
+    function notifyDiscord(message) {
+      fetch("https://discordapp.com/api/webhooks/1367898672796270683/VMF29GGKIKUfTpUk5HKbR7NcGekuC2errXJKqVm8MBUJpTCJd0BWYElich1W9bLMvlAD", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ content: message })
+      }).catch(error => console.error('ส่งไป Discord ล้มเหลว:', error));
+    }
+
+    function playClick() {
+      const sound = document.getElementById('click-sound');
+      if (sound) sound.play();
+    }
+
+    function showToast(message) {
+      const toast = document.createElement('div');
+      toast.className = 'toast';
+      toast.innerText = message;
+      document.body.appendChild(toast);
+      setTimeout(() => { toast.remove(); }, 3000);
+    }
+  </script>
+</body>
+</html>
